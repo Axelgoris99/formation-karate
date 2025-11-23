@@ -46,7 +46,7 @@
     breakable: false, // Keep card distinct
     {
       // Title Header
-      stack(dir: ltr, spacing: 1fr, text(weight: "bold", fill: black, title), if duration != none {
+      stack(dir: ltr, spacing: 1fr, text(weight: "bold", fill: secondary, title), if duration != none {
         text(style: "italic", size: 0.9em, fill: gray, duration)
       })
       // Main Description
@@ -60,11 +60,11 @@
           gutter: 0.5em,
           align: horizon,
 
-          if objectif != none { text(fill: blue.darken(20%), size: 1em, move(dy: -1pt, fa-icon("bullseye"))) },
-          if objectif != none { text(size: 0.9em, fill: blue.darken(30%), [#objectif]) },
+          if objectif != none { text(fill: primary, size: 1em, move(dy: -1pt, fa-icon("bullseye"))) },
+          if objectif != none { text(size: 0.9em, fill: primary, [#objectif]) },
 
-          if criteres != none { text(fill: green.darken(20%), size: 1em, move(dy: -1pt, fa-icon("check"))) },
-          if criteres != none { text(size: 0.9em, fill: green.darken(30%), [#criteres]) },
+          if criteres != none { text(fill: secondary, size: 1em, move(dy: -1pt, fa-icon("check"))) },
+          if criteres != none { text(size: 0.9em, fill: secondary, [#criteres]) },
         )
       }
     },
@@ -136,7 +136,7 @@
 
           // Colonne Notes (Remplie ou Vide)
           [
-            #text(weight: "bold", fill: black)[Notes]
+            #text(weight: "bold", fill: primary)[Notes]
             #v(0em)
             #notes
           ],
@@ -147,7 +147,7 @@
 
           // Colonne Bilan (Toujours vide pour écriture manuelle)
           [
-            #text(weight: "bold", fill: black)[Bilan]
+            #text(weight: "bold", fill: primary)[Bilan]
             #v(-1.5em)
             #set text(fill: black)
             #repeat[#text[ . ] ]
