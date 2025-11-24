@@ -36,13 +36,13 @@
 
 
 // Helper to create a styled "Exercise" card
-#let exo(title: "", duration: none, body, objectif: none, criteres: none) = {
+#let exo(title: "", duration: none, body, objectif: none, criteres: none, afa: none) = {
   block(
     width: 100%,
     stroke: 0.5pt + gray,
     radius: 4pt,
     inset: 8pt,
-    below: 0.2em,
+    below: 0.3em,
     breakable: false, // Keep card distinct
     {
       // Title Header
@@ -50,11 +50,20 @@
         text(style: "italic", size: 0.9em, fill: gray, duration)
       })
       // Main Description
-      body
+
+      if body != [] and body != none {
+        v(-0.5em)
+        body
+      }
+
 
       // Footer: Objective & Criteria
       if objectif != none or criteres != none {
+        v(-0.3em)
+
         line(length: 100%, stroke: 0.5pt + gray.lighten(50%))
+        v(-0.8em)
+
         grid(
           columns: (auto, 1fr),
           gutter: 0.5em,
@@ -65,7 +74,11 @@
 
           if criteres != none { text(fill: secondary, size: 1em, move(dy: -1pt, fa-icon("check"))) },
           if criteres != none { text(size: 0.9em, fill: secondary, [#criteres]) },
+
+          if afa != none { text(fill: accent, size: 1em, move(dy: -1pt, fa-icon("handshake-angle"))) },
+          if afa != none { text(size: 0.9em, fill: accent, [#afa]) },
         )
+        v(-0.3em)
       }
     },
   )
@@ -138,7 +151,7 @@
           [
             #text(weight: "bold", fill: primary)[Notes]
             #v(0em)
-            #notes
+            #text(size: 9pt)[#notes]
           ],
 
           // Séparateur

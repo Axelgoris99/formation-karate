@@ -10,8 +10,8 @@
 
   // COLUMN 1: PREPARATION
   prep: [
-    #exo(title: "Salutation (Rei) + Brief", duration: "3 min", objectif: "Sociabilisation")[
-      Debout (Ritsurei) & adapté selon les pathologies (éviter le seiza si genoux douloureux).
+    #exo(title: "Salut + Brief", duration: "3 min", objectif: "Sociabilisation")[
+      Debout (Ritsurei) / adapté selon les pathologies (éviter le seiza si genoux douloureux).
     ]
 
     #exo(title: "Mobilisation Articulaire", duration: "5 min")[
@@ -35,6 +35,7 @@
       duration: "10 min",
       objectif: "Renforcement stabilisateurs & quadriceps",
       criteres: "Tenir 10s sans osciller. Regard horizontal, dos droit",
+      afa: "Aider lors de la transition",
     )[
       Travail des positions naturelles vers plus larges (Kiba haut) et longues (Zenkutsu court). Transition lente.
     ]
@@ -44,6 +45,7 @@
       objectif: "Gérer le déséquilibre sur un pied",
       criteres: "Pose légère, buste droit.",
       duration: "10 min",
+      afa: "Aider et donner des conseils sur la position",
     )[
       Appui mur/barre optionel. Monter genou lent (prépa Mae Geri), tenir 2s, reposer loin devant en fente contrôlée. Idem en mawashi, yoko-geri.
     ]
@@ -53,6 +55,7 @@
       objectif: "Réactivité & Orientation",
       criteres: "Ne pas croiser les pieds, mains en garde.",
       duration: "10 min",
+      afa: "Aider a la demonstration",
     )[
       Sur une croix au sol. Au signal, déplacement d'un pas (avant/arrière/latéral) et retour centre. Différentes positions.
     ]
