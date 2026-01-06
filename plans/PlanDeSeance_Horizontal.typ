@@ -58,7 +58,7 @@
 
 
       // Footer: Objective & Criteria
-      if objectif != none or criteres != none {
+      if objectif != none or criteres != none or afa != none {
         v(-0.3em)
 
         line(length: 100%, stroke: 0.5pt + gray.lighten(50%))
@@ -66,7 +66,7 @@
 
         grid(
           columns: (auto, 1fr),
-          gutter: 0.5em,
+          gutter: 0.2em,
           align: horizon,
 
           if objectif != none { text(fill: primary, size: 1em, move(dy: -1pt, fa-icon("bullseye"))) },
